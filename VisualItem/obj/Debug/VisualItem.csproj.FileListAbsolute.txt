@@ -1,0 +1,28 @@
+C:\Projects\Testing\VisualItem\VisualItem\obj\Debug\VisualItem.csprojAssemblyReference.cache
+C:\Projects\Testing\VisualItem\VisualItem\bin\VisualItem.dll
+C:\Projects\Testing\VisualItem\VisualItem\bin\VisualItem.pdb
+C:\Projects\Testing\VisualItem\VisualItem\obj\Debug\VisualItem.csproj.CoreCompileInputs.cache
+C:\Projects\Testing\VisualItem\VisualItem\obj\Debug\VisualItem.dll
+C:\Projects\Testing\VisualItem\VisualItem\obj\Debug\VisualItem.pdb
+C:\Projects\Testing\VisualItem\VisualItem\bin\VisualItem.dll.config
+C:\Users\Martin Rosko\AppData\Local\Packages\Resco.MobileCRM_nf1vnwdtkksgr\LocalState\MobileCRM\WWW\VisualItem\bin\VisualItem.dll.config
+C:\Users\Martin Rosko\AppData\Local\Packages\Resco.MobileCRM_nf1vnwdtkksgr\LocalState\MobileCRM\WWW\VisualItem\bin\VisualItem.dll
+C:\Users\Martin Rosko\AppData\Local\Packages\Resco.MobileCRM_nf1vnwdtkksgr\LocalState\MobileCRM\WWW\VisualItem\bin\VisualItem.pdb
+C:\Users\Martin Rosko\AppData\Local\Packages\Resco.MobileCRM_nf1vnwdtkksgr\LocalState\MobileCRM\WWW\VisualItem\obj\Debug\VisualItem.csprojAssemblyReference.cache
+C:\Users\Martin Rosko\AppData\Local\Packages\Resco.MobileCRM_nf1vnwdtkksgr\LocalState\MobileCRM\WWW\VisualItem\obj\Debug\VisualItem.csproj.CoreCompileInputs.cache
+C:\Users\Martin Rosko\AppData\Local\Packages\Resco.MobileCRM_nf1vnwdtkksgr\LocalState\MobileCRM\WWW\VisualItem\obj\Debug\VisualItem.dll
+C:\Users\Martin Rosko\AppData\Local\Packages\Resco.MobileCRM_nf1vnwdtkksgr\LocalState\MobileCRM\WWW\VisualItem\obj\Debug\VisualItem.pdb
+c:\Projects\Testing\bkp4\VisualItem\bin\VisualItem.dll.config
+c:\Projects\Testing\bkp4\VisualItem\bin\VisualItem.dll
+c:\Projects\Testing\bkp4\VisualItem\bin\VisualItem.pdb
+c:\Projects\Testing\bkp4\VisualItem\obj\Debug\VisualItem.csprojAssemblyReference.cache
+c:\Projects\Testing\bkp4\VisualItem\obj\Debug\VisualItem.csproj.CoreCompileInputs.cache
+c:\Projects\Testing\bkp4\VisualItem\obj\Debug\VisualItem.dll
+c:\Projects\Testing\bkp4\VisualItem\obj\Debug\VisualItem.pdb
+C:\Users\andrej kanuch\Desktop\VisualItem\VisualItem\bin\VisualItem.dll.config
+C:\Users\andrej kanuch\Desktop\VisualItem\VisualItem\bin\VisualItem.dll
+C:\Users\andrej kanuch\Desktop\VisualItem\VisualItem\bin\VisualItem.pdb
+C:\Users\andrej kanuch\Desktop\VisualItem\VisualItem\obj\Debug\VisualItem.csprojAssemblyReference.cache
+C:\Users\andrej kanuch\Desktop\VisualItem\VisualItem\obj\Debug\VisualItem.csproj.CoreCompileInputs.cache
+C:\Users\andrej kanuch\Desktop\VisualItem\VisualItem\obj\Debug\VisualItem.dll
+C:\Users\andrej kanuch\Desktop\VisualItem\VisualItem\obj\Debug\VisualItem.pdb

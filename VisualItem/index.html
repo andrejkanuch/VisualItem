@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" style="height: 100%">
+<head>
+ 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" id="view" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Visual Item</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+	<link rel="stylesheet" href="Controls/css/controls.css" type="text/css">
+	<link rel="stylesheet" href="Controls/css/detailView.css" type="text/css" />
+	<link rel="stylesheet" href="Controls/css/advancedList-1.0.3.css" type="text/css" />
+	<link rel="stylesheet" href="Libraries/perfect-scrollbar.css" type="text/css">
+
+
+	<script src="Libraries/JSBridge.js"></script>
+	<script src="Libraries/jquery_3.1.1.min.js"></script>
+	<script src="Libraries/jquery_ui.min.js"></script>
+	<script src="Libraries/jquery.ui.touch_punch.min.js"></script>
+	<script src="Libraries/knockout_3.4.1.min.js"></script>
+	<script src="Libraries/perfect-scrollbar.min.js"></script>
+	<script src="Libraries/promise.min.js"></script>
+	<script src="Libraries/es6_shim_min.js"></script>
+
+	<script src="Controls/event.js"></script>
+
+	<script src="Helpers/bindingList.js"></script>
+	<script src="Helpers/command.js"></script>
+	<script src="Helpers/common.js"></script>
+	<script src="Helpers/exception.js"></script>
+	<script src="Helpers/koEngine.js"></script>
+
+	<script src="Controls/filterGroup.js"></script>
+	<script src="Controls/IView.js"></script>
+	<script src="Controls/advancedList-1.0.3.js"></script>
+	<script src="Controls/detailView.js"></script>
+
+	<script src="Data/droppableItem.js"></script>
+
+	<script src="UI/VisualItemController.js"></script>
+	<script src="UI/itemList.js"></script>
+
+	<script src="dragAndDrop.js"></script>
+</head>
+<body style="padding: 0px; margin: 0px; height: 100%; overflow: hidden">
+	<script type="text/html" id="tmplVisualItem">
+		<div class="visualItem" style="position: relative; width: 100%; height: 100%; overflow: hidden" >			
+			<div class="dropContainer" style="position: absolute; padding: 0px; margin: 0px" data-bind="cbDropZone: $data, style: {left: containerPosition.left() + 'px', top: containerPosition.top() + 'px', width: containerSize.width() + 'px', height: containerSize.height() + 'px'}">
+				<img style="width: 100%; height: 100%" data-bind="attr: {src: (imageDataB64() ? ('' + imageDataB64()) : '')}" /><!--data:image/png;base64,-->
+				<!-- ko foreach: answers -->
+					<!-- ko if: !dragged() -->
+						<!-- ko template: {name: 'tmplAnswerItem', afterRender: function(elements, form) { $data.appended(elements) } } --><!-- /ko -->
+					<!-- /ko -->
+				<!-- /ko -->
+			</div>
+			<div style="position: absolute; left: 10px; top: 10px; height: 50px; width: 50px; border: solid 1px black; border-radius: 20px; background: rgba(255, 255, 255, 0.5); background-image:url('Images/close.png'); background-position: center; background-repeat: no-repeat; font-size: 38px; font-weight: bold; text-align: center" data-bind="click: close" />
+			<div style="position: absolute; left: 70px; top: 10px; height: 50px; width: 50px; border: solid 1px black; border-radius: 20px; background: rgba(255, 255, 255, 0.5); background-image:url('Images/retake.png'); background-position: center; background-repeat: no-repeat; font-size: 38px; font-weight: bold; text-align: center" data-bind="click: retakePhoto" />
+			<div style="position: absolute; right: 10px; top: 10px; height: 50px; width: 50px; border: solid 1px black; border-radius: 20px; background: rgba(255, 255, 255, 0.5); background-image:url('Images/plus.png'); background-position: center; background-repeat: no-repeat; font-size: 38px; font-weight: bold; text-align: center" data-bind="click: toggleList" />
+			<!-- ko template: {name: 'tmplItemsList', data: itemList} --><!-- /ko -->
+		</div>
+	</script>
+
+	<script type="text/html" id="tmplAnswerItem">
+		<div class="answerItem" style="position: absolute; width: 50px; height: 50px; border: solid 1px black; border-radius: 15px; background: rgba(255, 255, 255, 0.5); background-repeat: no-repeat; background-position: center" data-bind="cbDragItem: $data, click: showDetails, style: { left: displayPositionLeft() + 'px', top: displayPositionTop() + 'px', backgroundImage: imageUrl}" />
+	</script>
+
+	<script type="text/html" id="tmplItemsList">
+		<!-- ko if: visible() -->
+		<div style="position: absolute; right: 10px; top: 70px; width: 300px; height: calc(100% - 80px); overflow: auto">
+			<!-- ko foreach: items -->
+				<!-- ko if: !dragged() -->
+					<div style="display: flex; width: 100%; height: 50px; margin-bottom: 10px; font-size: 16px; background: rgba(255, 255, 255, 0.5); border: solid 1px black; border-radius: 15px; box-sizing: border-box" data-bind="cbDragItem: $data">
+						<div style="flex: 0 0 50px; background-repeat: no-repeat; background-position: 10px 10px" data-bind="style: {backgroundImage: imageUrl}"/>
+						<div style="flex: 1 1 auto">
+							<span data-bind="cbDragItem: $data, text: name" style="text-transform: capitalize; font-style: normal; font-size: 10px" /><br />
+							<span data-bind="cbDragItem: $data, text: displayName" />
+						</div>
+					</div>
+				<!-- /ko -->
+			<!-- /ko -->
+		</div>
+		<!-- /ko -->
+	</script>
+	
+	<script type="text/html" id="tmplDraggedItem">
+		<div style="width: 60px; height: 60px; border: solid 1px black" data-bind="text: name" />
+	</script>
+
+	<script type="text/html" id="tmplDraggedGroupTemplate">
+		<div style="display: flex; width: 300px; height: 50px; font-size: 16px; background: rgba(255, 255, 255, 0.5); border: solid 1px black; border-radius: 15px; box-sizing: border-box">
+			<div style="flex: 0 0 50px; background-repeat: no-repeat; background-position: 10px 10px" data-bind="style: {backgroundImage: imageUrl}"/>
+			<div style="flex: 1 1 auto">
+				<span data-bind="cbDragItem: $data, text: name" style="text-transform: capitalize; font-style: normal; font-size: 10px" /><br />
+				<span data-bind="cbDragItem: $data, text: displayName" />
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmplDraggedGroup">
+		<div style="display: flex; width: 300px; height: 50px; font-size: 16px; background: rgba(255, 255, 255, 0.5); border: solid 1px black; border-radius: 15px; box-sizing: border-box">
+			<div style="flex: 0 0 50px; background-repeat: no-repeat; background-position: 10px 10px" data-bind="style: {backgroundImage: imageUrl}"/>
+			<div style="flex: 1 1 auto">
+				<span data-bind="cbDragItem: $data, text: name" style="text-transform: capitalize; font-style: normal; font-size: 10px" /><br />
+				<span data-bind="cbDragItem: $data, text: displayName" />
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmplDraggedAnswer">
+		<div style="width: 20px; height: 20px; border: solid 1px black; border-radius: 5px; background: red" />
+	</script>
+
+	<!-- ko template: { name: 'tmplVisualItem', afterRender: function(elements, form) { $data.appended(elements) } } --><!-- /ko -->
+	<script src="app.js"></script>
+</body>
+</html>

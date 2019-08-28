@@ -1,0 +1,142 @@
+﻿.view {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    visibility: visible;
+    height: auto;
+    min-height: 100px;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    overflow: auto;
+}
+
+/*
+ *     AdvancedList
+ */
+
+
+
+.advancedList {
+}
+
+    .advancedList .listRows {
+        position: relative;
+        top: 0px;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+	.advancedList .rowsContainer {
+		border-width: 1px;
+        border-color: green;
+		overflow: hidden;
+		position: relative;
+	}
+
+		.advancedList .rowsContainer.horizontal {
+			border-right: solid 1px silver;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.advancedList .rowsContainer.alHasSeparator {
+			border-bottom: solid 1px red;
+		}
+
+	.advancedList .alRow {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		cursor: pointer;
+		position: relative;
+	}
+
+		.advancedList .alRow .alCell {
+			position: absolute;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+			.advancedList .alRow .alCell .imageCell {
+				max-width: 100%;
+				max-height: 100%;
+			}
+
+	.advancedList .listRows.alHorizontal {
+		overflow-y: hidden;
+	}
+
+	.advancedList .alRow .buttonCell {
+		cursor: pointer;
+		text-align: center;
+		line-height: 20px;
+	}
+
+	.advancedList .alRow.alListRow {
+		background: #EEEEEE;
+		overflow: hidden;
+	}
+
+		.advancedList .alRow.alListRow .alInnerRow {
+			border-right: solid 1px silver;
+		}
+
+	.advancedList .searchBoxContainer {
+		position: absolute;
+		width: 100%;
+		padding: 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.advancedList .searchBox {
+		width: 100%;
+		padding: 5px;
+		font-size: 14px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		background: #eeeeee;
+		border: 0px;
+	}
+
+	.advancedList .emptyListTextTable {
+		position: absolute; /* fix this for not bound list, set the poisition property in code */
+		width: 100%;
+		height: 100%;
+        min-height: 100px;
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+	}
+
+		.advancedList .emptyListTextTable td {
+			text-align: center;
+			vertical-align: middle;
+		}
+
+
+	.advancedList .emptyListText {
+		text-align: center;
+		font-size: 12px;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+
+    .myRow {
+        color: red;
+        font-weight: bold;
+    }

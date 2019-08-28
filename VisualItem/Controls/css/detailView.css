@@ -1,0 +1,247 @@
+﻿/*
+ *     DetailView
+ */
+
+.baseform .content .detailView {
+	padding: 5px;
+}
+
+.detailView .separator {
+	font-size: 12px;
+	color: silver;
+}
+
+.detailGroup {
+	margin-bottom: 11px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: silver;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+	color: silver;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+	color: silver;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: silver;
+}
+
+.detailItem {
+	padding-top: 1px;
+	padding-bottom: 2px;
+	width: 100%;
+	background-color: white;
+	border-bottom: solid 2px #EEEEEE;
+	overflow: hidden;
+}
+
+	.detailItem:last-child {
+		border-bottom-width: 0px;
+	}
+
+	.detailItem .label {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 30%;
+		height: 100%;
+		color: #999999;
+		font-size: 15px;
+		font-weight: bold;
+		text-align: right;
+		float: left;
+		display: inline-block;
+		padding-right: 5px;
+		padding-left: 5px;
+		line-height: 30px;
+		overflow: hidden;
+	}
+
+		.detailItem .label.top {
+			width: 100%;
+			height: 20px;
+			display: block;
+			text-align: center;
+			line-height: 20px;
+		}
+
+	.detailItem .left {
+		text-align: left;
+	}
+
+	.detailItem .right {
+		text-align: right;
+	}
+
+	.detailItem .center {
+		text-align: center;
+	}
+
+	.detailItem .editor {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 70%;
+		height: 100%;
+		font-size: 15px;
+		float: left;
+		display: inline-block;
+		line-height: 30px;
+		position: relative;
+	}
+
+		.detailItem .editor.top {
+			width: 100%;
+			display: block;
+		}
+
+		.detailItem .editor.hidden {
+			width: 100%;
+		}
+
+
+		.detailItem .editor textarea {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			width: 100%;
+			border: 0px;
+			font-family: 'Segoe UI', sans-serif;
+			font-size: 14px;
+			overflow: auto;
+			resize: none;
+			padding: 5px;
+			background-color: transparent;
+		}
+
+		.detailItem .editor.invalid {
+			background: #ffb0b0;
+		}
+
+		.detailItem .editor .exclamation {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			cursor: pointer;
+			font-size: 20px;
+			color: #FFFFFF;
+			background: #FF0000;
+		}
+
+		.detailItem .editor input, select {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			border: 0px;
+			background-color: transparent;
+			padding-left: 5px;
+			padding-right: 5px;
+			font-size: 14px;
+		}
+
+			.detailItem .editor input[type=checkbox] {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				width: auto;
+				height: auto;
+			}
+
+			.detailItem .editor input:disabled {
+				color: #555555;
+			}
+
+		.detailItem .editor span.link {
+			color: blue;
+			text-decoration: underline;
+			cursor: pointer;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		.detailItem .editor span.button,
+		.linkItemPopup .editor span.button {
+			float: right;
+			font-size: 20px;
+			cursor: pointer;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+
+		.detailItem .editor span.numeric {
+			padding: 5px;
+		}
+
+	.detailItem .inlineLinkItemPopup {
+		position: relative;
+		height: 250px;
+		line-height: normal;
+		border: solid 1px #333333;
+	}
+
+		.detailItem .inlineLinkItemPopup .view.advancedList {
+			box-shadow: none;
+		}
+
+	.detailItem .editor span.linkPart,
+	.linkItemPopup .editor span.linkPart {
+		background-color: #EEEEEE;
+	}
+
+	.detailItem .editor span.removeLinkPart,
+	.linkItemPopup .editor span.removeLinkPart {
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	.detailItem .editor .button, .popup,
+	.linkItemPopup .editor .button, .popup {
+		position: absolute;
+	}
+
+	.detailItem .inlineLinkItemPopup .searchBoxContainer {
+		padding: 5px;
+		padding-bottom: 15px;
+	}
+
+	.detailItem .inlineLinkItemPopup.advancedList .editor input {
+		font-size: 14px;
+	}
+
+
+	.detailItem .editor .radioButton {
+		flex: 1 1 auto;
+		padding: 0px 5px;
+		border: solid 1px black;
+		border-left-width: 0px;
+		cursor: pointer;
+	}
+
+		.detailItem .editor .radioButton:hover {
+			background: #777;
+		}
+
+		.detailItem .editor .radioButton:first-child {
+			border-left-width: 1px;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		.detailItem .editor .radioButton:last-child {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		.detailItem .editor .radioButton.selected {
+			background: black;
+			color: white;
+		}
+
+/* DetailView radio item */

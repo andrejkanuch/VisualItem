@@ -1,0 +1,691 @@
+﻿body {
+	height: 100%;
+	overflow: auto;
+}
+
+.separator {
+	width: 100%;
+	height: 1px;
+}
+
+.alignBlock {
+	padding-left: 1em;
+	text-align: left;
+}
+
+.text {
+	text-wrap: none;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.backend {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	background-color: rgba(192,192,192, 0.2);
+}
+
+.rescoInvisibleControlLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	background-color:rgba(192,192,192, 0.2);
+}
+
+/** EntityList  */
+
+.entitySection .component {
+	width: 100%;
+	display: -webkit-inline-flex;
+	display: -ms-flexbox;
+	display: inline-flex;
+	height: 50px;
+	overflow-x: hidden;
+	-webkit-box-align: center;
+	-webkit-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+	.entitySection .component .componentPart:nth-last-child(2) {
+		text-align: left;
+	}
+
+	.entitySection .component .componentPart:last-child {
+		text-align: right;
+	}
+
+/** END EntityList */
+
+/** Color Picker */
+.simpleColorPicker[pickerStatus=opened] {
+	z-index: 10;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border: black solid 1px;
+	width: 100px;
+	height: 100px;
+	background-color: white;
+}
+
+	.simpleColorPicker[pickerStatus=opened] .palette {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	.simpleColorPicker[pickerStatus=opened] .paletteRow {
+		width: 100%;
+		display: table-row;
+	}
+
+		.simpleColorPicker[pickerStatus=opened] .paletteRow .paletteCell {
+			display: table-cell;
+		}
+
+	.simpleColorPicker[pickerStatus=opened] .paletteColor {
+		width: 90%;
+		height: 90%;
+		margin: 5%;
+	}
+
+.simpleColorPicker[pickerStatus=closed] .selectedColor {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+	.simpleColorPicker[pickerStatus=closed] .selectedColor > div:first-child {
+		width: 70%;
+	}
+
+	.simpleColorPicker[pickerStatus=closed] .selectedColor > div:last-child {
+		width: 30%;
+	}
+
+	.simpleColorPicker[pickerStatus=closed] .selectedColor .color {
+		width: 10px;
+		height: 2em;
+	}
+
+.selectedMark {
+	position: relative;
+	width: 25%;
+	height: 50%;
+	top: 20%;
+	margin: 0 auto;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+	transform: rotate(45deg);
+}
+
+/** END Color Picker */
+
+/** ImageBar */
+.imageBar {
+	width: 100%;
+	height: 3em;
+	display: inline-flex;
+	justify-content: center;
+}
+
+	.imageBar .icon {
+		margin: 2px;
+		border: 1px solid lightgray;
+		background-color: white;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.imageBar .selectedIcon {
+		background-color: #d3e9ff;
+		border: 1px solid #0066Cc;
+		-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+	}
+
+	.imageBar .disabled {
+		border: 1px solid lightGray;
+		background-color: lightgray;
+	}
+/** END Image Bar */
+
+
+
+/** Combo-Box */
+
+
+.combo-box .display-label {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.combo-box[comboBoxStatus=closed] {
+	color: black;
+}
+
+.combo-box[comboBoxStatus=open] {
+	color: red;
+}
+
+.combo-box .combo-box-label {
+	width: 90%;
+}
+
+.combo-box .combo-mark {
+	width: 10%;
+	margin-right: 0.8em;
+}
+
+	.combo-box .combo-mark .arrow {
+		border-bottom: 2px solid black;
+		border-right: 2px solid black;
+		height: 0.8em;
+		width: 0.8em;
+		float: right;
+		transform: rotate(45deg);
+	}
+
+.combo-box list-box {
+	z-index: 10;
+	position: absolute;
+	border: 1px solid black;
+}
+
+/** END Combo-Box*/
+
+/** List-Box */
+.list-box {
+	width: 100%;
+	overflow-y: auto;
+}
+
+	.list-box .list-box-item {
+		height: 3em;
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+
+		.list-box .list-box-item .own-template {
+			overflow: hidden;
+		}
+
+/** END List-Box */
+
+/** TreeView */
+.tree-view .display-label {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.tree-view .tree-view-label {
+	width: 90%;
+}
+
+.tree-view .tree-view-mark {
+	width: 10%;
+	margin-right: 0.8em;
+}
+
+	.tree-view .tree-view-mark .arrow {
+		border-bottom: 2px solid black;
+		border-right: 2px solid black;
+		height: 0.8em;
+		width: 0.8em;
+		float: right;
+		transform: rotate(45deg);
+	}
+
+
+.treeView[treeViewComboBoxStatus=opened] {
+	z-index: 10;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border: black solid 1px;
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	overflow-y: auto;
+}
+
+	.treeView[treeViewComboBoxStatus=opened] .bindingEntity {
+		height: 2.5em;
+		padding-right: 0.5em;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-webkit-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+		.treeView[treeViewComboBoxStatus=opened] .bindingEntity .mark {
+			width: 0.5em;
+			height: 0.5em;
+			border-bottom: 2px solid black;
+			border-right: 2px solid black;
+			transform: rotate(-45deg);
+			margin-right: 0.5em;
+		}
+
+		.treeView[treeViewComboBoxStatus=opened] .bindingEntity .expandedMark {
+			transform: rotate(45deg);
+		}
+
+	.treeView[treeViewComboBoxStatus=opened] .childrenPart {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+		.treeView[treeViewComboBoxStatus=opened] .childrenPart .bindingEntity > div:first-child {
+			float: left;
+		}
+
+		.treeView[treeViewComboBoxStatus=opened] .childrenPart .bindingEntity > div:last-child {
+			float: right;
+		}
+
+	.treeView[treeViewComboBoxStatus=opened] .buttons {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		background-color: aliceblue;
+	}
+
+		.treeView[treeViewComboBoxStatus=opened] .buttons > div {
+			flex: 1;
+			text-align: center;
+		}
+
+.treeView[treeViewComboBoxStatus=closed] {
+	margin-right: 0.5em;
+	width: 100%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+}
+
+/** END TreeView*/
+
+/** RescoDatePicker */
+
+.rescoDatePicker {
+	position: absolute;
+	border: 1px solid black;
+	text-align: center;
+	cursor: default;
+	user-select: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	z-index: 3;
+	margin-top: 0.3em;
+	background-color: white;
+}
+
+	.rescoDatePicker .header {
+		width: 100%;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		text-align: center;
+		align-content: space-around;
+	}
+
+		.rescoDatePicker .header > div:first-child, .rescoDatePicker .header > div:last-child {
+			flex-grow: 1;
+			width: 20%;
+		}
+
+			.rescoDatePicker .header > div:first-child > .arrow:hover, .rescoDatePicker .header > div:last-child > .arrow:hover,
+			.rescoDatePicker .header div:nth-child(2):not([data-actualviewtype="2"]):hover,
+			.rescoDatePicker .contentSection .dates .row .dateValue[data-isactual='true']:hover {
+				border: 1px solid #0066CC;
+			}
+
+		.rescoDatePicker .header div:nth-child(2) {
+			flex-grow: 3;
+			width: 60%;
+		}
+
+
+		.rescoDatePicker .header .arrow {
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+	.rescoDatePicker .contentSection .days {
+		border-bottom: 1px gray solid;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		font-size: 0.8em;
+		color: gray;
+	}
+
+		.rescoDatePicker .contentSection .days .dayName {
+			flex-grow: 1;
+			width: 14%;
+		}
+
+
+	.rescoDatePicker .contentSection .dates .row {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: space-around;
+		flex-flow: row nowrap;
+		align-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+		.rescoDatePicker .contentSection .dates .row .dateValue {
+			flex-grow: 1;
+			width: 14%;
+		}
+
+			.rescoDatePicker .contentSection .dates .row .dateValue[data-isactual='false'] {
+				color: lightgray;
+			}
+
+			.rescoDatePicker .contentSection .dates .row .dateValue[data-istoday='true'] {
+				color: #0066Cc;
+			}
+
+			.rescoDatePicker .contentSection .dates .row .dateValue[data-isactualdate='true']:not([data-istoday='true']) {
+				border: #0066CC;
+				background-color: #0066CC;
+				color: white;
+			}
+
+/** END RescoDatePicker */
+
+/** RescoInputDatePicker, RescoInputTimePicker */
+
+.rescoInputDatePicker, .rescoInputTimePicker {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	align-items: center;
+	-webkit-align-items: center;
+	align-content: center;
+	-webkit-align-content: center;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+	border: 1px solid gray;
+	overflow: hidden;
+}
+
+	.rescoInputDatePicker[data-isEditable='false'], .rescoInputTimePicker[data-isEditable='false'] {
+		color: gray;
+		border:1px solid lightgray;
+	}
+
+	.rescoInputDatePicker .inputPart, .rescoInputTimePicker .inputPart {
+		flex: 4;
+		-webkit-flex: 4;
+		margin: 0 0.3em;
+	}
+
+		.rescoInputDatePicker .inputPart input, .rescoInputTimePicker .inputPart input {
+			border: none;
+			width: 100%;
+		}
+
+	.rescoInputDatePicker[data-isEditable='false'] .inputPart input, .rescoInputTimePicker[data-isEditable='false'] .inputPart input {
+		color: gray;
+		border-color: lightgray;
+	}
+
+
+	.rescoInputDatePicker .rescoDatePickerPart, .rescoInputTimePicker .rescoTimePickerPart {
+		flex: 1;
+		-webkit-flex: 1;
+		margin: 0 0.3em;
+		background-repeat: no-repeat;
+		background-position: right center;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: flex-end;
+		-webkit-justify-content: flex-end;
+	}
+
+		.rescoInputDatePicker .rescoDatePickerPart .icon, .rescoInputTimePicker .rescoTimePickerPart .icon {
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+			.rescoInputDatePicker .rescoDatePickerPart .icon.defaultIcon, .rescoInputTimePicker .rescoTimePickerPart .icon.defaultIcon {
+				transition: transform 0.5s;
+				transform: rotate(0deg);
+			}
+
+			.rescoInputDatePicker .rescoDatePickerPart .icon.rotateIcon, .rescoInputTimePicker .rescoTimePickerPart .icon.rotateIcon {
+				transition: transform 0.5s;
+				transform: rotate(180deg);
+			}
+
+/** END RescoInputDatePicker, RescoInputTimePicker */
+
+/** RescoTimePicker */
+
+.rescoTimePicker {
+	position: absolute;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row nowrap;
+	-webkit-flex-flow: row nowrap;
+	align-items: center;
+	-webkit-align-items: center;
+	align-content: center;
+	-webkit-align-content: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	border: 1px solid gray;
+	z-index: 2;
+	cursor: default;
+	background-color: white;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin-top: 0.3em;
+}
+
+	.rescoTimePicker .hoursPart, .rescoTimePicker .minutesPart,  .rescoTimePicker .periodPart {
+		width: 50%;
+		text-align: center;
+	}
+
+		.rescoTimePicker .hoursPart > div, .rescoTimePicker .minutesPart > div,  .rescoTimePicker .periodPart > div {
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			align-items: center;
+			-webkit-align-items: center;
+			justify-content: center;
+			-webkit-justify-content: center;
+		}
+
+		.rescoTimePicker .hoursPart .button, .rescoTimePicker .minutesPart .button, .rescoTimePicker .periodPart .button {
+			height: 20%;
+		}
+
+			.rescoTimePicker .hoursPart .button .arrow, .rescoTimePicker .minutesPart .button .arrow, .rescoTimePicker .periodPart .button .arrow {
+				background-position: center center;
+				background-repeat: no-repeat;
+				height: 100%;
+				width: 100%;
+			}
+
+		.rescoTimePicker .hoursPart .hour, .rescoTimePicker .minutesPart .minute, .rescoTimePicker .periodPart .period {
+			height: 20%;
+			color: #0066CC;
+			background-color: white;
+			font-size: 0.9em;
+		}
+
+			.rescoTimePicker .hoursPart .hour.actual{
+				border-right: 1px solid #0066CC;
+			}
+
+			.rescoTimePicker .periodPart .period.actual {
+				border-left: 1px solid #0066CC;
+			}
+
+			.rescoTimePicker .hoursPart .hour.actual, .rescoTimePicker .minutesPart .minute.actual, .rescoTimePicker .periodPart .period.actual {
+				border-top: 1px solid #0066CC;
+				border-bottom: 1px solid #0066CC;
+				font-size: 1.3em;
+			}
+
+
+/** END RescoTimePicker */
+
+/** RescoComboBox */
+
+.rescoComboBox {
+	cursor: default;
+}
+
+.rescoComboBox .comboBoxHeader {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+
+	.rescoComboBox .comboBoxHeader .selectedItem {
+		flex: 4;
+		-webkit-flex: 4;
+	}
+
+	.rescoComboBox .comboBoxHeader .arrow {
+		flex: 1;
+		-webkit-flex: 1;
+	}
+
+		.rescoComboBox .comboBoxHeader .arrow .icon {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size:20px;
+		}
+
+.rescoComboBox .listBoxContainer {
+	z-index: 10;
+	position: absolute;
+	right: 0px;
+	width: 100%;
+}
+
+	.rescoComboBox .listBoxContainer.hidden {
+		display: none;
+	}
+
+	.rescoComboBox .listBoxContainer.visible {
+		display: block;
+	}
+
+/** END RescoComboBox*/
+
+/** PopupMenu */
+
+.popupMenu {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+	.popupMenu .content {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 0px;
+		height: 0px;
+		overflow: hidden;
+		border-style: none;
+	}
+
+	.popupMenu .content.hasBorder {
+		border-style: solid;
+	}
+
+		.popupMenu .content .item {
+			position: relative;
+			width: 100%;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction: row;
+			-webkit-flex-direction: row;
+		}
+
+		.popupMenu .content .item:not(.readonly):not(.separator):not(.selected):hover {
+			background-color: #bbb;
+		}
+		
+			.popupMenu .content .item .imageBox {
+				display: flex;
+				display: -webkit-flex;
+				align-items: center;
+				-webkit-align-items: center;
+				justify-content: center;
+				-webkit-justify-content: center;
+			}
+
+				.popupMenu .content .item .imageBox .image {
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+
+			.popupMenu .content .item .text {
+				flex-grow: 1;
+				cursor: default;
+				-webkit-flex-grow: 1;
+				display: flex;
+				display: -webkit-flex;
+				align-items: center;
+				-webkit-align-items: center;
+				padding-left: 10px;
+				border-left-style: solid;
+				border-left-width: 1px;
+			}
+
+/** END PopupMenu*/

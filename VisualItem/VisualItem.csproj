@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{CBD92D9F-A014-486C-9B84-5860CE17AC0D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="Controls\css\advancedList-1.0.3.css" />
+    <Content Include="Controls\css\controls.css" />
+    <Content Include="Controls\css\detailView.css" />
+    <Content Include="Images\boss.png" />
+    <Content Include="Images\employee.png" />
+    <Content Include="Images\plus.png" />
+    <Content Include="index.html" />
+    <Content Include="Libraries\es6_shim_min.js" />
+    <Content Include="Libraries\jquery.ui.touch_punch.min.js" />
+    <Content Include="Libraries\jquery_3.1.1.min.js" />
+    <Content Include="Libraries\jquery_ui.min.js" />
+    <Content Include="Libraries\JSBridge.js" />
+    <Content Include="Libraries\knockout_3.4.1.min.js" />
+    <Content Include="Libraries\perfect-scrollbar.css" />
+    <Content Include="Libraries\perfect-scrollbar.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Controls\detailView.ts" />
+    <TypeScriptCompile Include="Controls\event.ts" />
+    <TypeScriptCompile Include="Controls\filterGroup.ts" />
+    <TypeScriptCompile Include="Controls\IView.ts" />
+    <TypeScriptCompile Include="Data\droppableItem.ts" />
+    <TypeScriptCompile Include="dragAndDrop.ts" />
+    <TypeScriptCompile Include="Helpers\bindingList.ts" />
+    <TypeScriptCompile Include="Helpers\command.ts" />
+    <TypeScriptCompile Include="Helpers\common.ts" />
+    <TypeScriptCompile Include="Helpers\exception.ts" />
+    <TypeScriptCompile Include="Helpers\koEngine.ts" />
+    <TypeScriptCompile Include="Libraries\es6-shim.d.ts" />
+    <TypeScriptCompile Include="Libraries\jquery.d.ts" />
+    <TypeScriptCompile Include="Libraries\jqueryui.d.ts" />
+    <TypeScriptCompile Include="Libraries\JSBridge.d.ts" />
+    <TypeScriptCompile Include="Libraries\knockout.d.ts" />
+    <TypeScriptCompile Include="Libraries\perfect-scrollbar.d.ts" />
+    <TypeScriptCompile Include="UI\itemList.ts" />
+    <TypeScriptCompile Include="UI\visualItemController.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>VisualItem</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>32289</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:32289/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
