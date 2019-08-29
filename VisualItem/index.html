@@ -55,9 +55,11 @@
 			</div>
             <div class="control-buttons-wrapper">
                 <div class="control-buttons cntrl-close" data-bind="click: close" />
-                <div class="control-buttons cntrl-retake" data-bind="click: retakePhoto" />
-                <div class="control-buttons cntrl-toggle"   data-bind="click: toggleList" />
-            </div>
+                    <div class="bottom-buttons">
+                        <div class="control-buttons cntrl-retake" data-bind="click: retakePhoto" />
+                        <div class="control-buttons cntrl-toggle" data-bind="click: toggleList" />
+                    </div>
+                </div>
             <!-- ko template: {name: 'tmplItemsList', data: itemList} --><!-- /ko -->
 		</div>
 	</script>
@@ -68,7 +70,7 @@
 
 	<script type="text/html" id="tmplItemsList">
 		<!-- ko if: visible() -->
-		<div style="position: absolute; right: 10px; top: 70px; width: 300px; height: calc(100% - 80px); overflow: auto">
+		<div class="popUp-menu">
 			<!-- ko foreach: items -->
 				<!-- ko if: !dragged() -->
 					<div style="display: flex; width: 100%; height: 50px; margin-bottom: 10px; font-size: 16px; background: rgba(255, 255, 255, 0.5); border: solid 1px black; border-radius: 15px; box-sizing: border-box" data-bind="cbDragItem: $data">

@@ -22,16 +22,25 @@ span {
     height: 100%;
     background-color: #000000;
     opacity: 0.6;
+    padding:0 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
 .control-buttons {
     top: 10px;
-    height: 50px;
-    width: 50px;
-    border: solid 1px black;
-    border-radius: 20px;
-    background-position: center;
+    height: 28px;
+    width: 28px;
+    cursor:pointer;
     background-repeat: no-repeat;
-    font-size: 38px;
-    font-weight: bold;
-    text-align: center;
+    background-position: center;
+}
+
+.popUp-menu {
+    position: absolute;
+    right: 54px;
+    bottom: 0;
+    width: 300px;
+    height: calc(24% - 80px);
+    overflow: auto;
 }
