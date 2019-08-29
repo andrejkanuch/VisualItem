@@ -1,7 +1,37 @@
-﻿body {
+body {
     font-family: 'Segoe UI', sans-serif;
 }
 
 span {
     font-style: italic;
+}
+
+.cntrl-close {
+    background-image: url('Images/close.png');
+}
+.cntrl-retake {
+    background-image: url('Images/retake.png');
+}
+.cntrl-toggle {
+    background-image: url('Images/plus.png');
+}
+
+.control-buttons-wrapper{
+    position:absolute;
+    right:0;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.6;
+}
+.control-buttons {
+    top: 10px;
+    height: 50px;
+    width: 50px;
+    border: solid 1px black;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
 }

@@ -53,10 +53,12 @@
 					<!-- /ko -->
 				<!-- /ko -->
 			</div>
-			<div style="position: absolute; left: 10px; top: 10px; height: 50px; width: 50px; border: solid 1px black; border-radius: 20px; background: rgba(255, 255, 255, 0.5); background-image:url('Images/close.png'); background-position: center; background-repeat: no-repeat; font-size: 38px; font-weight: bold; text-align: center" data-bind="click: close" />
-			<div style="position: absolute; left: 70px; top: 10px; height: 50px; width: 50px; border: solid 1px black; border-radius: 20px; background: rgba(255, 255, 255, 0.5); background-image:url('Images/retake.png'); background-position: center; background-repeat: no-repeat; font-size: 38px; font-weight: bold; text-align: center" data-bind="click: retakePhoto" />
-			<div style="position: absolute; right: 10px; top: 10px; height: 50px; width: 50px; border: solid 1px black; border-radius: 20px; background: rgba(255, 255, 255, 0.5); background-image:url('Images/plus.png'); background-position: center; background-repeat: no-repeat; font-size: 38px; font-weight: bold; text-align: center" data-bind="click: toggleList" />
-			<!-- ko template: {name: 'tmplItemsList', data: itemList} --><!-- /ko -->
+            <div class="control-buttons-wrapper">
+                <div class="control-buttons cntrl-close" data-bind="click: close" />
+                <div class="control-buttons cntrl-retake" data-bind="click: retakePhoto" />
+                <div class="control-buttons cntrl-toggle"   data-bind="click: toggleList" />
+            </div>
+            <!-- ko template: {name: 'tmplItemsList', data: itemList} --><!-- /ko -->
 		</div>
 	</script>
 

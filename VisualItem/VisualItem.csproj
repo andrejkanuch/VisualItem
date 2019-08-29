@@ -28,8 +28,11 @@
     <Content Include="Controls\css\controls.css" />
     <Content Include="Controls\css\detailView.css" />
     <Content Include="Images\boss.png" />
+    <Content Include="Images\close.png" />
     <Content Include="Images\employee.png" />
+    <Content Include="Images\library.png" />
     <Content Include="Images\plus.png" />
+    <Content Include="Images\retake.png" />
     <Content Include="index.html" />
     <Content Include="Libraries\es6_shim_min.js" />
     <Content Include="Libraries\jquery.ui.touch_punch.min.js" />
